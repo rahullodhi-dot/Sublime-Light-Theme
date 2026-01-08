@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sublime House of Tea | Luxury Tea Experience</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ivory: '#F9F8F4', // Richer, warmer ivory
+              stone: '#EAE8E0', // Deep stone
+              forest: '#1A2F23', // Deep estate green
+              'forest-dark': '#0D1811', // Almost black green
+              sage: '#94A69A', // Muted, dusty sage
+              'sage-light': '#EEF2EF',
+              gold: '#C8A97E', // Muted antique gold (less yellow)
+              'gold-dim': '#AA8E66', // Darker gold for text
+              'gold-light': '#E6D2B3', // Pale gold highlight
+              earth: '#5E564D', // Warm earth tone
+              charcoal: '#262626', // Soft charcoal
+            },
+            fontFamily: {
+              // Prioritize Orange Avenue as requested, fallback to Cormorant Garamond
+              serif: ['"Orange Avenue"', '"Cormorant Garamond"', 'serif'], 
+              sans: ['"Orange Avenue"', '"Cormorant Garamond"', 'serif'],
+            },
+            backgroundImage: {
+              'noise': "url('https://grainy-gradients.vercel.app/noise.svg')",
+              'gradient-luxury': "linear-gradient(to bottom, #F9F8F4, #F0EFE9)",
+              'gradient-dark': "linear-gradient(to bottom, #1A2F23, #0D1811)",
+            },
+            boxShadow: {
+              'luxury': '0 30px 60px -12px rgba(26, 47, 35, 0.1)',
+              'luxury-hover': '0 40px 80px -15px rgba(26, 47, 35, 0.15)',
+              'subtle': '0 4px 24px -5px rgba(0,0,0,0.02)',
+              'glow': '0 0 30px rgba(200, 169, 126, 0.2)',
+            },
+            letterSpacing: {
+              'editorial': '0.05em', 
+              'widest': '0.25em',
+            },
+            dropShadow: {
+               'gold': '0 4px 12px rgba(200, 169, 126, 0.25)',
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      html {
+        font-size: 18px;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      body {
+        background-color: #F9F8F4;
+        color: #1A2F23;
+        font-family: "Orange Avenue", "Cormorant Garamond", serif;
+      }
+      h1, h2, h3, h4, h5, h6, p, span, a, button, li {
+        font-family: "Orange Avenue", "Cormorant Garamond", serif;
+      }
+      .text-balance {
+        text-wrap: balance;
+      }
+      .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .hide-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      /* Smooth scrolling for anchor links */
+      html {
+        scroll-behavior: smooth;
+      }
+      
+      /* Subtle Leaf Pattern Animation */
+      @keyframes sway {
+        0% { transform: rotate(0deg); }
+        50% { transform: rotate(3deg); }
+        100% { transform: rotate(0deg); }
+      }
+      .animate-sway {
+        animation: sway 12s ease-in-out infinite;
+      }
+
+      
+
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes spinSlowReverse {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+.step-card {
+  position: relative;
+
+}
+
+.step-card::before {
+  content: "";
+  position: absolute;
+  inset: 2px;               /* glow spread */
+  z-index: -1;                /*  card ke peeche */
+  border-radius: 999px;
+
+  background:
+    radial-gradient(
+      60% 60% at 50% 65%,
+      rgba(238, 190, 122, 0.22),
+      rgba(238, 190, 122, 0.12),
+      rgba(238, 190, 122, 0.05),
+      transparent 75%
+    );
+
+  filter: blur(28px);
+  opacity: 0;
+  transform: scale(0.95);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  pointer-events: none;
+}
+.step-card:hover{
+  transform: scale(2);
+}
+
+
+
+.active-card-glow::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: radial-gradient(
+    circle at top,
+    rgba(200,169,126,0.25),
+    transparent 60%
+  );
+  pointer-events: none;
+}
+
+
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@18.3.1",
+    "react/": "https://esm.sh/react@18.3.1/",
+    "react-dom": "https://esm.sh/react-dom@18.3.1",
+    "react-dom/client": "https://esm.sh/react-dom@18.3.1/client",
+    "react-router-dom": "https://esm.sh/react-router-dom@6.22.3?external=react,react-dom",
+    "@remix-run/router": "https://esm.sh/@remix-run/router@1.15.3",
+    "lucide-react": "https://esm.sh/lucide-react@0.344.0",
+    "framer-motion": "https://esm.sh/framer-motion@11.0.8",
+    "gsap": "https://esm.sh/gsap@3.12.5",
+    "gsap/ScrollTrigger": "https://esm.sh/gsap@3.12.5/ScrollTrigger",
+    "three": "https://esm.sh/three@0.160.0",
+    "@react-three/fiber": "https://esm.sh/@react-three/fiber@8.15.16?external=react,react-dom,three",
+    "@react-three/drei": "https://esm.sh/@react-three/drei@9.102.0?external=react,react-dom,three,@react-three/fiber",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "gsap/": "https://esm.sh/gsap@^3.14.2/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="./index.tsx"></script>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

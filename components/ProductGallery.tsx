@@ -219,12 +219,12 @@ const ProductCard: React.FC<{ product: Product; index: number }> = ({ product, i
         </div>
 
         <div className="flex-grow flex flex-col items-center text-center px-2" style={{ transform: 'translateZ(20px)' }}>
-          <h3 className="font-serif text-2xl lg:text-3xl text-forest mb-2 leading-tight group-hover:text-gold-dim transition-colors duration-500 text-balance">{product.name}</h3>
+          <h3 className="font-gotham text-xs lg:text-xl text-forest mb-2 leading-tight group-hover:text-gold-dim transition-colors duration-500 text-balance">{product.name}</h3>
 
-          <p className="text-lg text-earth/70 font-serif font-light leading-relaxed mb-6 line-clamp-2 max-w-[90%] min-h-[2.5rem]">{product.description}</p>
+          <p className="text-sm text-earth/70 font-gotham font-light leading-relaxed mb-2 line-clamp-2 max-w-[90%] min-h-[2.5rem]">{product.description}</p>
 
           <div className="mt-auto pt-4 border-t border-stone/20 w-full flex justify-center">
-            <p className="font-serif text-xl tracking-[0.15em] font-bold text-forest group-hover:text-gold transition-colors duration-300"> &#8377;{product.price.toFixed(2)}</p>
+            <p className="font-gotham text-sm tracking-[0.15em] font-bold text-forest group-hover:text-gold transition-colors duration-300"> &#8377;{product.price.toFixed(2)}</p>
           </div>
         </div>
       </div>
@@ -385,21 +385,21 @@ useEffect(() => {
       <LuxuryMotif className="-top-60 -left-40" />
       <LuxuryMotif className="-bottom-40 -right-40 rotate-180" />
 
-      <div className="container mx-auto px-6 lg:px-12 relative z-10">
+      <div className="max-w-[1180px] mx-auto px-6 lg:px-12 relative z-10">
         <div ref={headerRef} className="mb-6 text-center justify-start  flex flex-col items-center relative">
           {/* Subtle Gold Frame around header area */}
           <div className="absolute top-30 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[150%] rounded-[4rem] pointer-events-none -z-10"></div>
 
-          <span className="text-gold  uppercase tracking-[0.25em] text-xl font-bold font-serif block bg-gradient-luxury mb-6 px-4 relative z-10">Our Offerings</span>
+          <span className="text-gold  uppercase tracking-[0.25em] text-sm font-bold font-gotham block bg-gradient-luxury mb-6 px-4 relative z-10">Our Offerings</span>
 
-          <div className="overflow-hidden ">
-            <h2 className="font-serif text-5xl lg:text-[5rem] text-forest block tracking-tight leading-none text-balance">
-              {renderLetters("Curated Collections", "gallery-char")}
+          <div className="m-3 ">
+            <h2 className="font-serif text-5xl lg:text-[3rem] text-forest block tracking-tight leading-none text-balance">
+              {renderLetters("Curated Collections", "gallery-char font-buttain")}
             </h2>
 
           </div>
           <SectionDivider variant="ornate" />
-          <p ref={descRef} className="text-earth/80  flex justify-center items-center  text-2xl font-serif leading-relaxed max-w-2xl mx-auto text-balance">
+          <p ref={descRef} className="text-earth/80  flex justify-center items-center  text-lg font-gotham leading-relaxed max-w-2xl mx-auto text-balance">
             Discover our selection of artisanal teas, handpicked from the finest estates to ensure an exquisite brewing experience.
           </p>
         </div>
@@ -410,19 +410,19 @@ useEffect(() => {
             <button
               key={cat.id}
               onClick={() => setActiveCategory(cat.id)}
-              className={`relative pb-2 text-lg uppercase tracking-[0.2em] transition-all duration-500 group overflow-hidden font-serif font-bold ${activeCategory === cat.id
+              className={`relative pb-2 text-lg uppercase tracking-[0.2em] transition-all duration-500 group overflow-hidden font-gotham font-bold ${activeCategory === cat.id
                 ? 'text-forest'
                 : 'text-earth/50 hover:text-forest'
                 }`}
             >
-              <span className="relative z-10">{cat.label}</span>
+              <span className="relative z-10 font-gotham text-xs">{cat.label}</span>
               <span className={`absolute bottom-0 left-0 w-full h-[2px] bg-gold transition-transform duration-500 origin-left ${activeCategory === cat.id ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-50'
                 }`}></span>
             </button>
           ))}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12 perspective-[2000px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12 perspective-[2000px]">
           {filteredProducts.map((product, index) => (
             <ProductCard key={product.id} product={product} index={index} />
           ))}

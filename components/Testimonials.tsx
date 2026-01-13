@@ -22,7 +22,7 @@ useEffect(() => {
       scrollTrigger: {
         trigger: sectionRef.current,
         start: "top 85%",
-        end: "bottom 55%",
+        end: "bottom 85%",
         scrub: 0.7, //  smoother
       },
     });
@@ -99,16 +99,16 @@ useEffect(() => {
       {/* Grain */}
       <div className="absolute inset-0 opacity-[0.05] bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6">
+      <div className="relative z-10 max-w-[1180px] mx-auto px-6">
 
         {/* HEADER */}
-        <div className="flex flex-col md:flex-row justify-between items-end mb-24 gap-10">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-[64px] gap-10">
           <div>
             <span className="block text-gold uppercase tracking-[0.3em] text-sm mb-4">
               Testimonials
             </span>
-            <h2 className="font-serif text-6xl lg:text-8xl text-[#1A261C] leading-tight">
-              {splitText("Connoisseurs Choice", "lux-char")}
+            <h2 className="font-serif text-6xl lg:text-6xl text-[#1A261C] leading-tight">
+              {splitText("Connoisseurs Choice", "lux-char font-buttain text-4xl")}
             </h2>
           </div>
 
@@ -125,12 +125,12 @@ useEffect(() => {
               key={i}
               className="lux-card  bg-[#1A261C] text-white p-10 rounded-2xl border border-white/5"
             >
-              <div className="lux-inner flex flex-col justify-between min-h-[380px]">
+              <div className="lux-inner flex flex-col justify-between min-h-[300px]">
 
                 <div>
                   <div className="text-gold mb-8 tracking-widest">★★★★★</div>
 
-                  <p className="font-serif text-2xl leading-relaxed italic opacity-90">
+                  <p className="font-gotham text-sm leading-relaxed italic opacity-80">
                     “The aroma instantly takes me back to the hills.
                     It’s not just tea — it’s a moment of stillness.”
                   </p>
@@ -142,8 +142,8 @@ useEffect(() => {
                     className="w-14 h-14 rounded-full object-cover grayscale opacity-80"
                   />
                   <div>
-                    <h5 className="font-serif text-lg">Sarah Jenkins</h5>
-                    <p className="text-[10px] uppercase tracking-widest text-gold">
+                    <h5 className="font-gotham text-sm">Sarah Jenkins</h5>
+                    <p className="text-[10px] uppercase tracking-widest font-gotham text-gold">
                       Verified Buyer
                     </p>
                   </div>

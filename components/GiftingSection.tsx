@@ -428,20 +428,20 @@ useEffect(() => {
                             {gift.type === "intro" ? (
                                 <div className="relative z-10 w-full h-full flex items-center justify-center p-12">
                                     <div className=" slide-content text-center max-w-5xl slide-content">
-                                        <span className="uppercase joy-title tracking-[0.3em] text-xl text-gold block mb-4">
+                                        <span className="uppercase font-gotham  joy-title tracking-[0.3em] text-xl text-gold block mb-8">
                                             {gift.subtitle}
                                         </span>
 
-                                        <h2 className="font-serif opacity-0 joy-heading text-6xl lg:text-7xl text-white mb-8 leading-[0.9]">
+                                        <h2 className="font-buttain opacity-0 joy-heading text-3xl lg:text-5xl text-white mb-12 leading-[0.9]">
                                             Surprises Packed <br />
-                                            <span className="italic text-gold">With Joy</span>
+                                            <span className="italic text-gold mt-12">With Joy</span>
                                         </h2>
 
-                                        <p className="text-white/60 joy-desc text-xl mb-10 max-w-xl mx-auto">
+                                        <p className="text-white/60 joy-desc text-lg mb-10 max-w-xl font-gotham mx-auto">
                                             {gift.desc}
                                         </p>
 
-                                        <div className="animate-bounce text-gold text-xl uppercase tracking-widest">
+                                        <div className="animate-bounce  font-gotham text-gold text-sm uppercase tracking-widest">
                                             Scroll to explore
                                         </div>
                                     </div>
@@ -450,19 +450,19 @@ useEffect(() => {
                                 /* ---------- PRODUCT SLIDE ---------- */
                                 <div className="relative z-10 w-full h-full p-10 lg:p-20 flex items-end">
                                     <div className="slide-content max-w-4xl">
-                                        <span className="italic text-gold block mb-3">
+                                        <span className="italic font-gotham text-gold block mb-3">
                                             {gift.subtitle}
                                         </span>
 
-                                        <h3 className="font-serif text-5xl lg:text-7xl text-white mb-5 leading-none">
+                                        <h3 className="font-gotham  text-5xl lg:text-6xl text-white mb-5 leading-none">
                                             {gift.title}
                                         </h3>
 
-                                        <p className="text-white/80 text-lg max-w-lg mb-8">
+                                        <p className="text-white/80  font-gotham text-sm max-w-lg mb-8">
                                             {gift.desc}
                                         </p>
 
-                                        <Button variant="primary" className="text-lg">Read More</Button>
+                                        <Button variant="primary" className="text-xs font-gotham">Read More</Button>
                                     </div>
                                 </div>
                             )}

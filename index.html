@@ -29,6 +29,8 @@
               // Prioritize Orange Avenue as requested, fallback to Cormorant Garamond
               serif: ['"Orange Avenue"', '"Cormorant Garamond"', 'serif'], 
               sans: ['"Orange Avenue"', '"Cormorant Garamond"', 'serif'],
+                gotham: ['Gotham', 'sans-serif'],
+            buttain: ['Buttain', 'sans-serif']
             },
             backgroundImage: {
               'noise': "url('https://grainy-gradients.vercel.app/noise.svg')",
@@ -150,6 +152,31 @@
   );
   pointer-events: none;
 }
+
+
+    @font-face {
+      font-family: 'Gotham';
+      src: url('./assest/fonts/Gotham.woff2') format('woff2'),
+        url('./assest/fonts/Gotham.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'Gotham';
+      src: url('./assest/fonts/Gotham-Bold.woff2') format('woff2'),
+        url('./assest/fonts/Gotham-Bold.woff') format('woff');
+      font-weight: bold;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'Buttain';
+      src: url('./assest/fonts/Buttain-Regular.woff2') format('woff2'),
+        url('./assest/fonts/Buttain-Regular.woff') format('woff');
+      font-weight: 500;
+      font-style: normal;
+    }
 
 
     </style>

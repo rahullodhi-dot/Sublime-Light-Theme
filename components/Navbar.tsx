@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Search, ShoppingBag, Heart, Menu } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import gsap from 'gsap';
+import DarkLogo from "../assest/Dark-Logo.png"
 
 const LinkWithHover: React.FC<{ to: string; children: React.ReactNode }> = ({ to, children }) => {
   const lineRef = useRef<HTMLDivElement>(null);
@@ -99,14 +100,15 @@ export const Navbar: React.FC = () => {
       ref={navRef}
       className="fixed top-0 left-0 w-full z-50 transition-all border-b border-transparent py-8"
     >
-      <div className="container mx-auto px-6 lg:px-12 flex justify-between items-center">
+      <div className="max-w-[1180px] mx-auto px-6 lg:px-12 flex justify-between items-center">
         {/* Logo */}
-        <Link to="/" className="font-serif text-3xl lg:text-4xl text-ivory font-bold tracking-tight relative group">
-          Sublime<span className="text-gold transition-colors duration-500 group-hover:text-white">.</span>
+        <Link to="/" className="font-serif h-[80px] text-3xl lg:text-4xl text-ivory font-bold tracking-tight relative group">
+          {/* Sublime<span className="text-gold transition-colors duration-500 group-hover:text-white">.</span> */}
+          <img src={DarkLogo} alt="" className='h-full' />
         </Link>
 
         {/* Center Links (Desktop) */}
-        <div className="hidden lg:flex items-center gap-12 font-sans text-xs uppercase tracking-[0.25em] text-ivory/90 font-medium">
+        <div className="hidden lg:flex items-center gap-4 font-sans text-xs uppercase tracking-[0.25em] text-ivory/90 font-medium">
           <LinkWithHover to="/">Loose-Tea</LinkWithHover>
           <LinkWithHover to="/collections">Honey</LinkWithHover>
           <LinkWithHover to="#">Spices</LinkWithHover>

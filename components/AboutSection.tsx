@@ -288,16 +288,16 @@ export const AboutSection: React.FC = () => {
         )
 
       /* ================= PARALLAX ================= */
-      gsap.to(imageRef.current, {
-        y: -80,
-        ease: "none",
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top bottom",
-          end: "bottom top",
-          scrub: 1.6,
-        },
-      })
+      // gsap.to(imageRef.current, {
+      //   y: -80,
+      //   ease: "none",
+      //   scrollTrigger: {
+      //     trigger: sectionRef.current,
+      //     start: "top bottom",
+      //     end: "bottom top",
+      //     scrub: 1.6,
+      //   },
+      // })
 
     
 
@@ -311,22 +311,22 @@ export const AboutSection: React.FC = () => {
       ref={sectionRef}
       className="py-28 bg-[#EAE8E0] overflow-hidden"
     >
-      <div className="container mx-auto px-6 lg:px-12">
+      <div className="max-w-[1180px] mx-auto px-6 lg:px-12">
         <div className="grid lg:grid-cols-12 gap-16 items-center">
 
           {/* LEFT CONTENT */}
-          <div className="lg:col-span-5">
+          <div className="lg:col-span-6" >
             <h2
               ref={headingRef}
-              className="font-serif text-5xl lg:text-[5rem] text-forest leading-[0.95]"
+              className="font-gotham text-3xl lg:text-[3rem] text-[#a07a27] leading-[0.95]"
             >
               Crafting Legacy Since 1998
             </h2>
 
-            <div className="mt-6 space-y-6 text-xl font-serif text-earth border-l border-forest/40 pl-8">
-              <p ref={para1Ref}>
+            <div className="mt-6 space-y-6 text-lg font-gotham  text-black border-l border-forest/40 pl-8">
+              <p className="font-gotham opacity-50 text-sm" ref={para1Ref}>
 More than tea, spices, nuts, or honey, Sublime House of Tea is an appreciative experience of Health and Wellness. Founded in 2013, Sublime House of Tea, much like Prestige, is an initiative, which brings together, supreme quality, trust, authenticity, and freshness to your daily lives, through your kitchens.              </p>
-              <p ref={para2Ref}>
+              <p  className="font-gotham opacity-50 text-sm" ref={para2Ref}>
           Yet, despite the vast array of tea varieties available, only a few  classic options have managed to gain mainstream popularity.  Tea holds immense potential beyond its current status of being a  classic beverage—chai. While nothing compares to the  brilliance of Kadak chai, it's important to remember that tea can  be much more than that.
               </p>
             </div>
@@ -334,7 +334,7 @@ More than tea, spices, nuts, or honey, Sublime House of Tea is an appreciative e
             <div ref={buttonRef} className="mt-10">
               <Button
                 variant="outline"
-                className="border-forest/30 text-forest hover:bg-forest hover:text-white px-10 py-4 font-serif italic text-lg"
+                className="border-forest/30 text-forest hover:bg-forest hover:text-white px-10 py-2 font-gotham italic text-sm"
               >
                 Read Our Full Story
               </Button>
@@ -342,19 +342,19 @@ More than tea, spices, nuts, or honey, Sublime House of Tea is an appreciative e
           </div>
 
           {/* RIGHT IMAGE */}
-          <div className="lg:col-span-5 lg:col-start-8 relative">
+          <div className="lg:col-span-6 mb-12 lg:col-start-8 relative">
             <div
               ref={imageWrapRef}
-              className="relative aspect-[3/4] rounded-t-[16rem] rounded-b-lg overflow-hidden shadow-luxury"
+              className="relative aspect-[3/4] mb-12  rounded-t-[16rem] rounded-b-lg overflow-hidden shadow-luxury"
             >
               <div
                 ref={imageRef}
-                className="w-full h-full backface-hidden"
+                className="w-full mb-12 h-[90%] backface-hidden"
               >
                 <ImageWithLoader
                   src={AboutImage}
                   alt="Tea Heritage"
-                  className="w-full h-full object-cover"
+                  className="w-full  h-full object-cover"
                 />
               </div>
             </div>

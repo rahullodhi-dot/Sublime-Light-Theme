@@ -256,88 +256,89 @@ export const ShowcaseSection: React.FC = () => {
   }, []);
 
   return (
-  <section
-  ref={sectionRef}
-  className="relative min-h-screen flex items-center overflow-hidden"
->
-  {/* ===== Background Image ===== */}
-  <div
-    className="
+    <section
+      ref={sectionRef}
+      className="relative min-h-screen flex items-center overflow-hidden"
+    >
+      {/* ===== Background Image ===== */}
+      <div
+        className="
       absolute inset-0
       bg-[url('../assest/bck.png')]
       bg-cover bg-center
       mix-blend-overlay
     
       pointer-events-none
+    
       z-0
     "
-  />
+      />
 
-  {/* Optional dark overlay for contrast */}
-  <div className="absolute inset-0 bg-black/30 z-0 pointer-events-none" />
+      {/* Optional dark overlay for contrast */}
+      <div className="absolute inset-0 bg-black/30 z-0 pointer-events-none" />
 
-  {/* ===== Content ===== */}
-  <div className="relative z-10 container mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center">
-    
-    {/* TEXT */}
-    <div ref={textRef}>
-      <div className="showcase-label flex items-center gap-4 mb-6">
-        <div className="w-12 h-px bg-[#C8A97E]" />
-        <span className="uppercase tracking-widest text-lg text-[#C8A97E]">
-          Limited Edition
-        </span>
+      {/* ===== Content ===== */}
+      <div className="relative z-10 max-w-[1180px] mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center">
+
+        {/* TEXT */}
+        <div ref={textRef}>
+          <div className="showcase-label flex items-center gap-4 mt-6">
+            <div className="w-12 h-px bg-[#C8A97E]" />
+            <span className="uppercase tracking-widest text-xs font-gotham text-[#C8A97E]">
+              Limited Edition
+            </span>
+          </div>
+
+          <h2 className="font-serif text-5xl text-gold lg:text-7xl mb-8 leading-[0.9]">
+            <span className="block">
+              {renderLetters("Limited Edition", "showcase-char text-2xl font-buttain")}
+            </span>
+            <span className="block">
+              {renderLetters("Signature Release", "showcase-char font-buttain text-3xl")}
+            </span>
+          </h2>
+
+
+          <div className="showcase-fade space-y-6 mb-10 text-[#E6E3DC]">
+            <p className="text-sm font-gotham opacity-80">
+              A rare expression of craftsmanship, created for those who seek the exceptional. This limited-edition selection represents the pinnacle of our tea-making philosophy — sourced from a single origin, harvested at its most expressive moment, and crafted in small batches to preserve its purity.
+            </p>
+            <p className="text-sm font-gotham opacity-80">
+              Only available for a short time, each leaf is carefully chosen for its character, aroma, and depth, resulting in a cup that is both elegant and unforgettable. Subtle, complex, and beautifully balanced, this release is a celebration of seasonality and precision.
+              Presented in our handcrafted collector’s canister, this edition is produced in strictly limited quantities and will not be restocked once sold out.
+            </p>
+          </div>
+
+          <div className="showcase-fade">
+            <Button className="text-xs">Reserve Yours</Button>
+          </div>
+        </div>
+
+        {/* 3D CANVAS */}
+        <div className="h-[80vh] p w-full relative">
+          <div className="absolute h-[100%] w-full top-0">
+            <img src={borderImage} alt="" className="h-full w-full" />
+          </div>
+          <Canvas
+            shadows
+            className="w-full h-full rounded-xl"
+            camera={{ position: [0, 0, 7], fov: 40 }}
+          >
+            <ambientLight intensity={0.4} />
+            <directionalLight position={[4, 4, 6]} intensity={1.2} />
+            <spotLight
+              position={[-6, 6, 4]}
+              angle={0.4}
+              penumbra={1}
+              intensity={1.4}
+              castShadow
+            />
+            <Scene />
+          </Canvas>
+        </div>
+
       </div>
-
-     <h2 className="font-serif text-5xl text-gold lg:text-7xl mb-8 leading-[0.9]">
-  <span className="block">
-    {renderLetters("Limited Edition", "showcase-char")}
-  </span>
-  <span className="block">
-    {renderLetters("Signature Release", "showcase-char")}
-  </span>
-</h2>
-
-
-      <div className="showcase-fade space-y-6 mb-10 text-[#E6E3DC]">
-        <p className="text-xl">
-      A rare expression of craftsmanship, created for those who seek the exceptional. This limited-edition selection represents the pinnacle of our tea-making philosophy — sourced from a single origin, harvested at its most expressive moment, and crafted in small batches to preserve its purity.
-        </p>
-        <p className="text-xl">
-         Only available for a short time, each leaf is carefully chosen for its character, aroma, and depth, resulting in a cup that is both elegant and unforgettable. Subtle, complex, and beautifully balanced, this release is a celebration of seasonality and precision.
-Presented in our handcrafted collector’s canister, this edition is produced in strictly limited quantities and will not be restocked once sold out.
-        </p>
-      </div>
-
-      <div className="showcase-fade">
-        <Button className="text-lg">Reserve Yours</Button>
-      </div>
-    </div>
-
-    {/* 3D CANVAS */}
-    <div className="h-[95vh] p w-full relative">
-      <div className="absolute h-[100%] w-full top-0">
-        <img src={borderImage} alt="" className="h-full w-full" />
-      </div>
-      <Canvas
-        shadows
-        className="w-full h-full rounded-xl"
-        camera={{ position: [0, 0, 7], fov: 40 }}
-      >
-        <ambientLight intensity={0.4} />
-        <directionalLight position={[4, 4, 6]} intensity={1.2} />
-        <spotLight
-          position={[-6, 6, 4]}
-          angle={0.4}
-          penumbra={1}
-          intensity={1.4}
-          castShadow
-        />
-        <Scene />
-      </Canvas>
-    </div>
-
-  </div>
-</section>
+    </section>
 
   );
 };

@@ -339,8 +339,8 @@ const StepCard: React.FC<{ step: typeof STEPS[0]; index: number }> = ({ step, in
       </div>
 
       <div className="step-text-content opacity-0">
-        <h3 className="font-serif text-4xl text-forest mb-4 group-hover:text-gold-dim transition-colors duration-500">{step.title}</h3>
-        <p className="text-earth/70 text-lg leading-relaxed font-serif max-w-[240px] mx-auto text-balance">
+        <h3 className="font-gotham text-xl  text-forest mb-4 group-hover:text-gold-dim transition-colors duration-500">{step.title}</h3>
+        <p className="text-earth/70 text-xs leading-relaxed font-gotham max-w-[240px] mx-auto text-balance">
           {step.desc}
         </p>
       </div>
@@ -433,12 +433,12 @@ export const ProcessSection: React.FC = () => {
 
       <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-[0.03] mix-blend-multiply pointer-events-none"></div>
 
-      <div className="container mx-auto px-6 lg:px-12 relative z-10">
+      <div className="max-w-[1180px] mx-auto px-6 lg:px-12 relative z-10">
         <div ref={headerRef} className="text-center mb-24">
-          <span ref={labelRef} className="text-gold uppercase tracking-[0.2em] text-xl font-bold font-serif mb-2 block">The Process</span>
+          <span ref={labelRef} className="text-gold uppercase tracking-[0.2em] text-sm font-bold font-gotham -mb-3 block">The Process</span>
           <div className="overflow-hidden inline-block">
             <h2 className="font-serif text-6xl lg:text-8xl text-forest block tracking-tight">
-              {renderLetters("Why Buy From Sublime", "process-char")}
+              {renderLetters("Why Buy From Sublime", "process-char font-gotham text-5xl ")}
             </h2>
           </div>
         </div>

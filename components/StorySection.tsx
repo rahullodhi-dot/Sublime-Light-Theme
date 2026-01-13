@@ -36,7 +36,7 @@ const TEA_TYPES = [
   },
   {
     id: 'herbal',
-    label: 'Herbal Tisanes',
+    label: 'Herbal Tea',
     origin: 'Global Blend',
     desc: 'The most delicate of teas, lightly brewed from young buds for a soft, refined, and elegant taste.',
     image: HerbalTea
@@ -399,25 +399,25 @@ useEffect(() => {
          <BotanicalBg />
       </div>
       
-      <div className="container mx-auto px-6 lg:px-12 relative z-10 w-full">
+      <div className="max-w-[1180px] mx-auto px-6 lg:px-12 relative z-10 w-full">
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-24 items-center h-full">
           
           {/* LEFT PANEL: Selector - Order 1 on Mobile */}
           <div className="lg:col-span-5 flex flex-col justify-center order-1 lg:order-1">
             <div className="mb-10">
-                <div ref={labelRef} className="flex items-center gap-4 mb-2">
+                <div ref={labelRef} className="flex items-center gap-4 mb-6">
                     <div className="w-12 h-[1px] bg-gold"></div>
-                    <span className="text-gold uppercase tracking-[0.25em] text-lg font-bold font-serif">Explore Our Range </span>
+                    <span className="text-gold uppercase tracking-[0.25em] text-xs font-bold font-gotham">Explore Our Range </span>
                 </div>
                 
                 <div ref={headerRef} className="mb-8">
                     <h2 className="font-serif text-5xl lg:text-[4rem] text-forest leading-[1] tracking-tight mb-0">
-                       <span className="block whitespace-nowrap">{renderLetters("Our Tea Types", "story-char")}</span>
+                       <span className="block whitespace-nowrap">{renderLetters("Our Tea Types", "story-char font-buttain text-4xl")}</span>
                     </h2>
                 </div>
                 
                 {/* Dynamic Description */}
-                <p ref={descRef} className="text-earth text-lg leading-relaxed font-serif pl-1 border-l-2 border-transparent h-24 text-balance">
+                <p ref={descRef} className="text-earth text-xs font-gotham leading-relaxed font-serif pl-1 border-l-2 border-transparent  text-balance">
                    {activeTea.desc}
                 </p>
             </div>
@@ -430,7 +430,7 @@ useEffect(() => {
                     onMouseEnter={() => handleTeaSelect(tea)}
                     className={`tea-list-item group  flex items-center justify-between w-full text-left py-4 border-b border-forest/10 transition-all duration-300 ${activeTea.id === tea.id ? 'pl-4 border-gold/40' : 'hover:pl-2'}`}
                 >
-                    <span className={`font-serif text-2xl transition-colors duration-300 ${activeTea.id === tea.id ? 'text-forest font-medium' : 'text-forest/40 group-hover:text-forest/70'}`}>
+                    <span className={`font-gotham text-sm transition-colors duration-300 ${activeTea.id === tea.id ? 'text-forest font-medium' : 'text-forest/40 group-hover:text-forest/70'}`}>
                         {tea.label}
                     </span>
                     
@@ -479,8 +479,8 @@ useEffect(() => {
                 ref={originRef}
                 className="absolute bottom-12 -left-4 lg:-left-12 bg-[#FDFCF8] px-8 py-6 max-w-[280px] shadow-luxury border border-stone/40 z-[100] rounded-sm"
              >
-                <span className="text-[10px] uppercase tracking-widest text-gold font-bold font-serif block mb-2">Origin</span>
-                <p className="font-serif italic text-2xl text-forest leading-snug">{activeTea.origin}</p>
+                <span className="text-[10px] font-gotham uppercase tracking-widest text-gold font-bold font-serif block mb-2">Origin</span>
+                <p className="font-gotham italic text-xl text-forest leading-snug">{activeTea.origin}</p>
             </div>
           </div>
 

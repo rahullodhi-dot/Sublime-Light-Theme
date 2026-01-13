@@ -136,7 +136,7 @@ const FallingLeaves = ({ count = 60 }) => {
 
 const renderLetters = (text: string, className: string = "") => {
   return text.split('').map((char, index) => (
-    <span key={index} className={`inline-block ${className}`}>
+    <span key={index} className={`inline-block ${className} `}>
       {char === ' ' ? '\u00A0' : char}
     </span>
   ));
@@ -433,40 +433,40 @@ export const Hero: React.FC = () => {
       <div className="absolute bottom-[-20%] left-[-10%] w-[60%] h-[80%] bg-[#0F1610] rounded-full blur-[100px] opacity-90 pointer-events-none -z-10" />
       <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-[0.04] pointer-events-none z-0 mix-blend-overlay"></div>
 
-      <div className="container mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-20 items-center relative z-[50]">
+      <div className="max-w-[1180px] mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-20 items-center relative z-[50]">
 
         {/* Left: Content */}
-        <div ref={textContainerRef} className="max-w-3xl relative will-change-transform">
+        <div ref={textContainerRef} className="max-w-3xl py-6 h-full relative will-change-transform">
           <div>
-            <div ref={estRef} className="flex items-center gap-3 text-sage mb-10 overflow-hidden">
+            <div ref={estRef} className="flex items-center gap-3 text-sage  overflow-hidden">
               <span className="w-16 h-[1px] bg-gold/60"></span>
-              <p className="text-2xl inline uppercase tracking-[0.3em] font-bold text-gold/80">Since. 1998 </p>
+              <p className="text-sm mb-3 inline uppercase  font-bold font-gotham text-gold/80">Since. 1998 </p>
             </div>
 
             <div ref={titleContainerRef} className="mb-12">
-              <h1 className="font-serif text-8xl lg:text-[9.5rem] leading-[0.85] text-white tracking-tight drop-shadow-2xl origin-bottom-left block mix-blend-screen">
-                {renderLetters("Sublime", "hero-char")}
+              <h1 className="font-gotham text-4xl lg:text-[4rem] mb-6  text-white  drop-shadow-2xl origin-bottom-left block mix-blend-screen">
+                {renderLetters("Sublime", "hero-char font-buttain mt-12 ")}
               </h1>
-              <span className="italic text-gold font-light block transform translate-x-4 font-serif text-7xl lg:text-[8rem] leading-[0.85] origin-bottom-left">
-                {renderLetters("House of Tea", "hero-char")}
+              <span className=" text-gold font-light block transform translate-x-4 mt-12 font-serif  lg:text-[3rem]  origin-bottom-left">
+                {renderLetters("House of Tea", "hero-char font-buttain mt-8 ")}
               </span>
             </div>
 
-            <div className="overflow-hidden mb-20">
-              <p ref={descRef} className="text-gray-200 text-lg lg:text-xl leading-loose max-w-lg font-sans font-light tracking-wide mix-blend-plus-lighter">
+            <div className="overflow-hidden mb-3">
+              <p ref={descRef} className="text-gray-200 text-sm lg:text-sm leading-loose max-w-lg font-gotham  font-light/70 tracking-wide mix-blend-plus-lighter">
                 Curating the finest tea leaves from the world’s most renowned gardens. A sip of purity, tradition, and luxury.
               </p>
             </div>
 
             <div
               ref={ctaRef}
-              className="flex flex-wrap gap-8 z-[50] items-center relative"
+              className="flex flex-wrap gap-8 z-[50] mt-6 items-center relative"
             >
            
                 <Button
                   // variant="gold"
                   // withIcon
-                  className="text-lg font-medium "
+                  className="text-sm font-medium font-gotham "
                 >
                   Discover Collections
                 </Button>
@@ -477,7 +477,7 @@ export const Hero: React.FC = () => {
         </div>
 
         {/* Right: Visual */}
-        <div className="relative h-[650px] lg:h-[800px] w-full flex items-center justify-end">
+        <div className="relative h-[650px] lg:h-[500px] w-full flex items-center justify-end">
 
 
           {/* Main Masked Image */}

@@ -140,15 +140,15 @@ export const Footer: React.FC = () => {
       <div className="relative z-10 container mx-auto px-6 lg:px-12 pt-20 pb-10">
 
         {/* MAIN GRID */}
-        <div className="grid lg:grid-cols-12 gap-16 border-b border-white/10 pb-14">
+        <div className="grid lg:grid-cols-12 gap-6  border-b border-white/10 pb-14">
 
           {/* LEFT */}
-          <div className="lg:col-span-6">
-            <h2 className="font-serif text-5xl mb-6 leading-tight">
-              Sublime <br /> House of Tea
+          <div className="lg:col-span-5">
+            <h2 className=" text-3xl font-buttain mb-6 leading-tight">
+              Sublime  House of Tea
             </h2>
 
-            <p className="text-white/50 max-w-md mb-8 leading-relaxed">
+            <p className="text-white/80 max-w-md mb-8 font-gotham leading-relaxed">
               Subscribe for exclusive blends, private tastings,
               and heritage stories.
             </p>
@@ -157,43 +157,43 @@ export const Footer: React.FC = () => {
               <input
                 type="email"
                 placeholder="Your email address"
-                className="bg-transparent w-full py-3 outline-none text-white placeholder:text-white/30"
+                className="bg-transparent w-full py-3 text-xs outline-none text-white placeholder:text-white/50 font-gotham"
               />
-              <button className="text-gold uppercase tracking-[0.3em] text-xs font-bold hover:text-white transition">
+              <button className="text-gold font-gotham  uppercase tracking-[0.3em] text-[12px] font-bold hover:text-white transition">
                 Join
               </button>
             </div>
           </div>
 
           {/* RIGHT */}
-          <div className="lg:col-span-6 grid sm:grid-cols-3 gap-12">
+          <div className="lg:col-span-6 grid sm:grid-cols-3 ">
 
             {/* EXPLORE */}
-            <div>
+            <div className="inline-block">
               <h4 className="footer-heading">Explore</h4>
-              <ul className="footer-links">
-                <li><a className="footer-link" href="#">Our Story</a></li>
-                <li><a className="footer-link" href="#">Collections</a></li>
-                <li><a className="footer-link" href="#">Gifting</a></li>
-                <li><a className="footer-link" href="#">Journal</a></li>
+              <ul className="footer-links font-gotham">
+                <li><a className="footer-link font-gotham text-sm " href="#">Our Story</a></li>
+                <li><a className="footer-link font-gotham text-sm " href="#">Collections</a></li>
+                <li><a className="footer-link font-gotham text-sm " href="#">Gifting</a></li>
+                <li><a className="footer-link font-gotham text-sm " href="#">Journal</a></li>
               </ul>
             </div>
 
             {/* CONTACT */}
-            <div>
-              <h4 className="footer-heading">Contact</h4>
-              <p className="footer-link">123 Tea Garden Road<br />Bangalore, India</p>
-              <p className="footer-link mt-3">+91 1234 567 890</p>
-              <p className="footer-link mt-3">hello@sublimehouseoftea.com</p>
+            <div className="px-2">
+              <h4 className="footer-heading font-gotham text-sm ">Contact</h4>
+              <p className="footer-link font-gotham text-sm">123 Tea Garden Road<br />Bangalore, India</p>
+              <p className="footer-link mt-3 font-gotham text-sm">+91 1234 567 890</p>
+              <p className="footer-link mt-3 font-gotham text-sm">hello@sublimehouseoftea.com</p>
             </div>
 
             {/* SOCIAL */}
-            <div>
+            <div className="ml-20">
               <h4 className="footer-heading">Social</h4>
               <ul className="space-y-4">
-                <li><a className="footer-social" href="#"><Facebook /> Facebook</a></li>
-                <li><a className="footer-social" href="#"><Instagram /> Instagram</a></li>
-                <li><a className="footer-social" href="#"><Twitter /> Twitter</a></li>
+                <li><a className="footer-social font-gotham text-sm" href="#"><Facebook /> Facebook</a></li>
+                <li><a className="footer-social font-gotham text-sm" href="#"><Instagram /> Instagram</a></li>
+                <li><a className="footer-social font-gotham text-sm" href="#"><Twitter /> Twitter</a></li>
               </ul>
             </div>
 
@@ -204,8 +204,8 @@ export const Footer: React.FC = () => {
         <div className="pt-8 flex flex-col md:flex-row justify-between text-[10px] tracking-[0.3em] uppercase text-white/30">
           <p>© 2024 Sublime House of Tea</p>
           <div className="flex gap-8 mt-4 md:mt-0">
-            <a href="#" className="hover:text-white">Privacy</a>
-            <a href="#" className="hover:text-white">Terms</a>
+            <a href="#" className="hover:text-white font-gotham text-sm">Privacy</a>
+            <a href="#" className="hover:text-white font-gotham text-sm">Terms</a>
           </div>
         </div>
       </div>

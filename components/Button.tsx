@@ -21,9 +21,9 @@ export const Button: React.FC<ButtonProps> = ({
   const baseStyles = "inline-flex items-center justify-center px-10 py-5 transition-colors duration-500 font-sans tracking-[0.2em] text-[10px] uppercase font-bold rounded-full group relative overflow-hidden";
   
   const variants = {
-    primary: "bg-forest text-white shadow-xl shadow-forest/10 border border-transparent",
-    outline: "border border-forest/20 text-forest hover:border-forest/60 bg-transparent",
-    ghost: "text-forest  hover:bg-sage-light"
+    primary: "bg-forest text-white shadow-xl shadow-forest/10 font-gotham border border-transparent",
+    outline: "border border-forest/20 text-forest font-gotham hover:border-forest/60 bg-transparent",
+    ghost: "text-forest  hover:bg-sage-light font-gotham"
   };
 
   const handleMouseMove = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -103,7 +103,7 @@ export const Button: React.FC<ButtonProps> = ({
         />
       )}
 
-      <span ref={textRef} className="relative z-10 flex items-center gap-3 pointer-events-none">
+      <span ref={textRef} className="relative z-10 font-gotham text-xs  flex items-center gap-3 pointer-events-none">
         {children}
         {withIcon && (
           <ArrowRight className="w-3 h-3 transition-transform duration-300 group-hover:translate-x-1" />
